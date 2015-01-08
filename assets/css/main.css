@@ -1,0 +1,498 @@
+/*
+    Punkt steht für Klassen
+    # steht für IDs
+
+
+    Alle Farben die Browser mit Namen verstehen: http://www.147colors.com/grid/
+    Alle anderen Farben im hex-Code angeben. z.B. #ffffff = weiß oder #AAAAAA = schwarz
+
+*/
+
+/*************************************************************** allgemeine settings*/
+/*
+    reset block
+    Bestimmte Werte sind standardmmäßig gesetzt,
+    z.B. unordered-lists haben einen 'list-style'.
+    All diese Werte sollen hier für sämtliche
+    HMTL-Elemente zurückgesetzt werden.
+
+*/
+* {
+    margin:0;
+    padding:0;
+    list-style: none;
+    border: 0;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+/*
+    Lösung zum Problem von width und padding
+    Artikel: http://www.paulirish.com/2012/box-sizing-border-box-ftw
+    Kurze Erläuterung: Gibt man einem div eine width und zusätlich ein padding
+    rechts od. links so wird die width um diese Werte erweitert.
+    Um diesen Effekt zu unterbinden kann man die box-sizing property
+    auf border-box setzen.
+*/
+div {
+    box-sizing: border-box;
+}
+
+
+/*
+   Helferklasse um nach gefloateten div-Elementen
+   innerhalb eines divs die Berechnung der Höhe des
+   übergeordneten Elements zu erzwingen.
+*/
+.clearboth {
+    clear: both;
+}
+
+/*  */
+html {
+    /*background: url('../img/bg.png') no-repeat center center #1d1d1d;*/
+    /*background: url('../img/background1.jpg') no-repeat center center;*/
+    /*background-size: cover;*/
+    background: url('../img/dimension.png');
+    height: 100%;
+}
+
+body {
+    color: #4b4b4b; /* globale Schriftfarbe */
+    font-family: Corbel,Arial,Helvetica,sans-serif;
+    height: 100%;
+}
+
+header {
+    padding-top: 3em;
+    padding-bottom: 20px;
+}
+
+#main_container {
+    min-height: 100%;
+    margin-bottom: -70px; /* gleiche Höhe wie footer */
+}
+
+#main_container:after {
+    content: "";
+    display: block;
+    margin-bottom: -70px; /* gleiche Höhe wie footer */
+}
+
+
+/* alles zwischen header und footer */
+#content {
+    border-radius: 5px; /* runde Ecken */
+    /*border: 1px solid #EB3B8B;*/ /* pink */
+    padding-top: 2em;
+}
+
+.content {
+    padding-top: 2em;
+
+    /* zentriertes Ausrücken des Inhalts */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content_fullwidth {
+    width: 100%;
+    /*background: url('../img/content_bg.png');*/
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.site_intro_text {
+
+    /* zentriertes Ausrücken des Inhalts */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 5px 0;
+    text-align: justify;
+
+    /* Wie man Text-Shadow verwendet: http://line25.com/articles/using-css-text-shadow-to-create-cool-text-effects; */
+    text-shadow: 1px 1px 2px white;
+}
+
+/*************************************************************** Hauptnavigation */
+#main_nav {
+    max-width: 1000px;
+}
+
+#main_nav_inner {
+    text-align: center;
+}
+
+#main_nav_inner a {
+    color: #4b4b4b;
+    display: inline-block;
+    padding: 5px;
+    /*background: url('../img/content_bg.png');*/
+
+    border-bottom: none;
+    /*
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    */
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 35px;
+
+    /* morphing für die Hintergrundfarbe ermöglichen */
+    transition: all 0.3s ease;
+}
+
+#main_nav_inner a:hover {
+    background: #EB3B8B;
+    color: white;
+}
+
+/* Klasse für den Button der gerade aktiven Seite */
+#main_nav_inner .active {
+    background: #EB3B8B; /* pink */
+    color: #eee;
+}
+
+
+/*************************************************************** Startseite */
+/* Überschrift auf der Startseite */
+h1 {
+    text-align: center;
+    margin: 30px 0 15px 0;
+}
+
+#startseite_headline {
+    display: block;
+    width: 400px;
+    margin: auto;
+}
+
+.welcome_img_wrapper {
+    width: 100%;
+    padding-top: 2em;
+}
+
+.img_wrap {
+    float: left;
+    width: 20%; /* Abstände und Breite berechnen sich auf Basis von 4 Bildern */
+    margin-right: 6.66%;
+    background: #DDFFDA;
+}
+
+.img_wrap img {
+    max-width: 100%;
+}
+
+/* das letzte Bild hat keinen Abstand rechts */
+.img_wrap:last-child {
+    margin-right: 0;
+}
+
+.img_wrap_lower {
+    padding: 2px;
+}
+
+.img_wrap h2 {
+    font-size: 17px;
+}
+
+.img_wrap .img_wrap_lower p {
+    font-size: 14px;
+}
+
+/*************************************************************** Kahnfahrten */
+#kahn_container {
+    padding-top: 20px;
+}
+
+#kahn_wrap {
+    float: left;
+}
+
+.kahn_wrapper {
+    position: relative;
+    background-color: #DDFFDA;
+    margin-bottom: 1.5em;
+    min-height: 155px;
+    padding-right: 10px;
+    border: 5px solid white;
+}
+
+.kahn_inner_left {
+    float: left;
+    max-width: 20%;
+    padding-right: .8em;
+}
+
+/* Bild des Unternehmens */
+.kahn_bild {
+    width: 100%;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.kahn_bild:hover {
+    border: 2px solid grey;
+}
+
+.kahn_inner_right {
+}
+
+.kahn_inner_right h2 {
+    color: #4b4b4b;
+    font-size: 20px;
+}
+
+.kahn_desc {
+    text-align: justify;
+}
+
+.kahn_address_link_wrapper {
+    margin-top: .5em;
+}
+
+.kahn_address {
+    padding-bottom: 20px;
+}
+
+.kahn_link {}
+
+.kahn_link a {
+    color: #D60062;
+}
+
+.kahn_link a:hover {
+    text-decoration: underline;
+}
+
+
+/*************************************************************** Rezepte */
+
+/* filter ist die sub-navigaton */
+#filter {
+    background: url("../img/essen/bar.png") repeat-x 0 -94px;
+    display: block;
+    height: 39px;
+    margin: 20px auto 30px auto;
+    position: relative;
+    width: 600px;
+    text-align:center;
+
+    -moz-box-shadow:0 4px 4px #000;
+    -webkit-box-shadow:0 4px 4px #000;
+    box-shadow:0 4px 4px #000;
+}
+
+#filter:before, #filter:after {
+    background: url("../img/essen/bar.png") no-repeat;
+    height: 43px;
+    position: absolute;
+    top: 0;
+    width: 78px;
+    content: '';
+
+    -moz-box-shadow:0 2px 0 rgba(0,0,0,0.4);
+    -webkit-box-shadow:0 2px 0 rgba(0,0,0,0.4);
+    box-shadow:0 2px 0 rgba(0,0,0,0.4);
+}
+
+#filter:before {
+    background-position: 0 -47px;
+    left: -78px;
+}
+
+#filter:after {
+    background-position: 0 0;
+    right: -78px;
+}
+
+#filter a{
+    color: #FFFFFF;
+    display: inline-block;
+    height: 39px;
+    line-height: 37px;
+    padding: 0 15px;
+    text-shadow:1px 1px 1px #315218;
+}
+
+#filter a:hover{
+    text-decoration:none;
+}
+
+#filter a.active{
+    background: url("../img/essen/bar.png") repeat-x 0 -138px;
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2),
+                -1px 0 0 rgba(255, 255, 255, 0.2),
+                1px 0 1px rgba(0,0,0,0.2) inset,
+                -1px 0 1px rgba(0,0,0,0.2) inset;
+}
+
+/* container enthält die Rezept-Blöcke */
+#container {
+    display:block;
+    overflow:hidden;
+    max-width: 1000px;
+    font-size: 12px;
+}
+
+#container li {
+    float: left;
+    height: 120px;
+    width: 116px;
+    margin: 0.3em;
+    padding: 0.075em;
+    position: relative;
+    background-color: #DDFFDA;
+    /*border: 2px solid #A8BA2F;
+    border-radius: 2px;*/
+}
+
+#container ul {
+    overflow:hidden;
+}
+
+#container ul.hidden {
+    display:none;
+}
+
+
+/*************************************************************** Sehenswürdigkeiten */
+#map_content {
+    padding-top: 20px;
+}
+
+#map_container {
+    float: right;
+    height: 600px;
+    width: 75%;
+}
+
+/* Map Panel */
+#map_panel {
+    float: left;
+    width: 23%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.61);
+}
+
+#panel_nav {
+
+}
+
+#panel_nav li {
+    text-align: center;
+    margin: 8px;
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .05), 0 -2px 0 0 rgba(0, 0, 0,0.01) inset; /* subtiler Schlagschatten*/
+}
+
+#panel_nav li a {
+    display: block;
+    padding: 4px;
+    color: #D60062;
+}
+
+.active_panel_item {
+    background: #ededed;
+    color: #444;
+}
+
+
+/* div-Container im Popup mit der Beschreibung und Bild zum Marker */
+.marker_content {
+    max-width: 350px;
+}
+
+.marker_header {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.marker_desc {}
+
+.marker_img {
+    float: left;
+    padding-right: 10px;
+}
+
+.marker_img img {
+    width: 100px;
+}
+
+/*************************************************************** rezepte */
+.rezept_img_zutaten_wrapper {
+   /* zentriertes Ausrücken des Inhalts */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 0;
+}
+
+.rezept_img {
+    float: left;
+    padding-right: 20px;
+}
+
+.rezept_zutaten li:first-child {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.rezept_text {
+    /* zentriertes Ausrücken des Inhalts */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 0;
+}
+
+/*************************************************************** footer */
+
+footer {
+    clear: both;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+}
+
+#footer_inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Liste von Links im Footer */
+#footer_inner ul {
+    font-size:20px;
+    float: right;
+    margin-top: 1em;
+}
+
+#footer_inner ul li {
+    float: left;
+}
+
+#footer_inner ul li:last-child {
+    margin-right: 0; /* um hinter dem letzten Elem. den Abstand zu verhindern weil unnötig */
+}
+
+#footer_inner ul li a {
+    color: #EB6AA4;
+}
+
+#footer_inner ul li a:hover {
+    text-decoration: underline;
+}
+
+#beuth_logo {
+    width: 160px;
+    margin-top: 10px;
+}

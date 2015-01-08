@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <!-- In Meta-Angaben können Sie verschiedene nützliche Anweisungen für Web-Server, Web-Browser und automatische Suchprogramme im Internet ("Robots") notieren. Meta-Angaben können Angaben zum Autor und zum Inhalt der Datei enthalten. Sie können aber auch HTTP-Befehle absetzen, zum Beispiel zum automatischen Weiterleiten des Web-Browsers zu einer anderen Adresse. (Quelle: http://de.selfhtml.org/html/kopfdaten/meta.htm)-->
+    <meta charset="utf-8" />
+    <meta name="description" content="Diese Website dient in erster Linie dem Kennenlernen und Anwenden von Internettechnologien. Das gewählte Thema ist hierbei der Spreewald mit all seinen Eigenschaften. Dem Nutzer der Website soll diese als Informationsübersicht bei der groben Orientierung helfen.">
+    <meta name="keywords" content="Spreewald, Kahnfahren, Gastronomie, Sehenswürdigkeiten, Paddeln">
+    <meta name="author" content="Verena Kuschke s779179">
+
+    <!-- Titel der Seite (was man oben im Browser sieht) -->
+    <title>Spreewald.de.gg</title>
+
+    <!-- Einbindung des Stylesheets -->
+    <link href="assets/css/main.css" type="text/css" rel="stylesheet" />
+
+    <!-- Einbindung des Javascript-Codes -->
+    <!-- Einbinden der jQuery-Bibliothek -->
+    <script src="assets/js/jquery.1.6.1.min.js"></script>
+
+    <!-- GoogleMaps API -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <!-- Steuerungsfunktionen für GoogleMaps -->
+    <script type="text/javascript" src="assets/js/gmscript.js"></script>
+
+</head>
+
+
+
+<!--
+    Sobald der HTML-body geladen ist ruft der onload-Event die Funktion
+    "initialize" aus der Datei "gmscript.js" auf um die Karte darzustellen.
+-->
+<body onload="initialize()">
+
+    <div id="main_container">
+
+        <section class="content">
+
+            <!-- Kopfbereich -->
+            <header>
+
+                <!-- Navigation -->
+                <nav id="main_nav">
+                    <div id="main_nav_inner">
+                        <a href="index.html">Home</a>
+                        <a href="essentrinken.html">Regionale K&uuml;che</a>
+                        <a href="kahnfahren.html">Kahnfahren</a>
+                        <a href="sehenswuerdigkeiten.html" class="active">Sehensw&uuml;rdigkeiten</a>
+                    </div>
+                </nav>
+
+            </header>
+
+        </section><!-- Ende content -->
+
+        <section class="content_fullwidth">
+
+            <p class="site_intro_text">
+                Der Spreewald und seine Umgebung bieten auch eine zahlreiche Auswahl an Attraktionen neben der idyllischen Natur. Hier werden  einige Unternehmen und Sehensw&uuml;rdigkeiten der Region vorgestellt und gezeigt, wie Sie am besten dort hinkommen.
+            </p>
+
+        </section><!-- Ende content_fullwidth -->
+
+        <section class="content">
+
+                <div id="map_content">
+
+                    <!-- Steuerungspanel für GoogleMap -->
+                    <div id="map_panel">
+
+                        <div id="panel_inner">
+                            <ul id="panel_nav">
+                                <li class="panel_item">
+                                    <!--<a href="" onClick=" eineJavaScriptFunktion() ">Testlink</a>-->
+                                    <a href="" onclick="event.preventDefault(); showSite('Slawenburg Raddusch');">Slawenburg Raddusch</a>
+                                </li>
+                                <li class="panel_item">
+                                    <a href="" onclick="event.preventDefault(); showSite('Forscherkahn Nautilus');">Forscherkahn Nautilus</a>
+                                </li>
+                                <li class="panel_item">
+                                    <a href="" onclick="event.preventDefault(); showSite('Spreewaldmuseum Lübbenau');">Spreewaldmuseum</a>
+                                </li>
+                                <li class="panel_item">
+                                    <a href="" onclick="event.preventDefault(); showSite('Adler und Jagdfalkenhof zur Calauer Schweiz');">Adler und Jagdfalkenhof</a>
+                                </li>
+                                <li class="panel_item">
+                                    <a href="" onclick="event.preventDefault(); showSite('Schlossinsel Lübben');">Schlossinsel L&uuml;bben</a>
+                                </li>
+                            </ul>
+                        </div><!-- Ende panel_inner -->
+
+                    </div>
+
+                    <!-- Dieser Container wird durch das gmscript.js gefüllt -->
+                    <div id="map_container"></div>
+
+                </div><!-- Ende map_content -->
+
+        </section><!-- Ende content -->
+
+    </div><!-- Ende main_container -->
+
+    <div class="clearboth;"></div>
+
+    <footer>
+        <div id="footer_inner">
+            <img id="beuth_logo" src="assets/img/beuth_logo_white.png">
+            <ul>
+                <li><a href="impressum.html">Impressum</a></li>
+            </ul>
+        </div><!-- Ende footer_inner -->
+    </footer>
+
+</body>
+</html>

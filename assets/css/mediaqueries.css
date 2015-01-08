@@ -1,0 +1,169 @@
+
+/*
+ Beispiel für responsive design: http://trentwalton.com
+ -------------------------------------------------------------- */
+@media screen and (min-width: 20.000em) { /*320px*/
+    body {
+        background-color: red;
+    }
+}
+
+@media screen and (min-width: 25.000em) { /*400px*/
+    body {
+        background-color: yellow;
+    }
+}
+
+
+@media screen and (max-width: 37.438em) { /*bis 599px*/
+    body {
+        line-height:1.45;
+        background-color: green;
+    }
+
+    /* Bilder auf der Startseite */
+    .img_wrap {
+        float: left;
+        width: 40%; /* Abstände und Breite berechnen sich auf Basis von 4 Bildern */
+        background: #DDFFDA;
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+
+    /* jedes 2te ELement */
+    .img_wrap:nth-child(2n) {
+        float: left;
+        margin-left: 5%
+    }
+
+    .img_wrap:nth-child(2n-1) {
+        float: right;
+        margin-right: 5%
+    }
+
+    .img_wrap:last-child {
+        display: inline-block;
+    }
+
+    /* Kahnseite - Bilder der Unternehmen */
+    .kahn_inner_left {
+        max-width: 40%;
+    }
+
+}
+
+
+
+@media screen and (min-width: 37.500em) and (max-width: 49.999em) { /*600px - 799px*/
+
+    body {
+        font-size: 112.5%;
+        background-color: gray;
+    }
+    #main_container, #footer_inner {
+        padding: 0 1em;
+    }
+
+    /* Bilder auf der Startseite */
+    .img_wrap {
+       float: left;
+        width: 30%; /* Abstände und Breite berechnen sich auf Basis von 3 Bildern */
+        margin-right: 5%;
+        background: #DDFFDA;
+    }
+
+    .img_wrap:nth-child(3) {
+        margin-right: 0;
+    }
+
+    .img_wrap:last-child {
+        display: none;
+    }
+
+    /* Rezeptseite / Kulinarik  - Schriftgröße der Rezepte verkleinern */
+    #container {}
+
+    /* Kahnseite - Bilder der Unternehmen */
+    .kahn_inner_left {
+        max-width: 30%;
+    }
+
+}
+
+
+@media screen and (min-width: 50em) and (max-width: 64.374em) { /*800p - 1030px*/
+    body {
+        font-size: 112.5%;
+        background-color: gray;
+    }
+    #main_container, #footer_inner {
+        padding: 0 1em;
+    }
+}
+
+@media screen and (min-width: 50.000em) { /*ab 800px*/
+    body {
+        font-size: 125%;
+        background-color: white;
+    }
+
+    /* Bilder auf der Startseite */
+    .img_wrap {
+        float: left;
+        width: 20%; /* Abstände und Breite berechnen sich auf Basis von 4 Bildern */
+        margin-right: 6.66%;
+        background: #DDFFDA;
+    }
+
+    .img_wrap:last-child {
+        display: inline-block;
+    }
+
+    .kahn_inner_right {
+        font-size: 80%;
+    }
+
+    .kahn_address_link_wrapper .kahn_link {
+        vertical-align: bottom;
+    }
+}
+
+
+@media screen and (min-width: 64.375em){ /*1030px*/
+    body {
+        font-size: 137.5%;
+    }
+}
+
+@media screen and (min-width: 75.000em) and (min-height:31.250em) { /*1200px X 500px*/
+    body {
+        font-size: 150%;
+    }
+
+
+}
+
+@media screen and (min-height:43.750em)  {  /*700px*/
+    
+}
+
+
+/* media queries für spezielle Endgeräte */
+/*iPhone / iPod Touch*/
+@media only screen and (max-device-width: 480px) {
+    body {
+        background-color: red;
+    }
+}
+
+/*iPhone mit Retina Display*/
+@media only screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) { 
+    body {
+        background-color: gray;
+    }
+}
+
+/*iPad*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) {}
+/*oder:*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {}

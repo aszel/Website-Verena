@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <!-- In Meta-Angaben können Sie verschiedene nützliche Anweisungen für Web-Server, Web-Browser und automatische Suchprogramme im Internet ("Robots") notieren. Meta-Angaben können Angaben zum Autor und zum Inhalt der Datei enthalten. Sie können aber auch HTTP-Befehle absetzen, zum Beispiel zum automatischen Weiterleiten des Web-Browsers zu einer anderen Adresse. (Quelle: http://de.selfhtml.org/html/kopfdaten/meta.htm)-->
+    <meta charset="utf-8" />
+    <meta name="description" content="Diese Website dient in erster Linie dem Kennenlernen und Anwenden von Internettechnologien. Das gewählte Thema ist hierbei der Spreewald mit all seinen Eigenschaften. Dem Nutzer der Website soll diese als Informationsübersicht bei der groben Orientierung helfen.">
+    <meta name="keywords" content="Spreewald, Kahnfahren, Gastronomie, Sehenswürdigkeiten, Paddeln">
+    <meta name="author" content="Verena Kuschke s779179">
+
+    <!-- Titel der Seite (was man oben im Browser sieht) -->
+    <title>Spreewald.de.gg</title>
+
+    <!-- Einbindung des Stylesheets -->
+    <link href="assets/css/main.css" type="text/css" rel="stylesheet" />
+
+    <!-- Einbindung des Javascript-Codes -->
+    <!-- Einbinden der jQuery-Bibliothek -->
+    <script src="assets/js/jquery.1.6.1.min.js"></script>
+
+
+    <!-- Quelle: http://tutorialzine.com/2011/06/beautiful-portfolio-html5-jquery/ -->
+    <!-- jQuery-Plugin zur Sortierung der Rezepte -->
+    <script src="assets/js/jquery.quicksand.js"></script>
+    
+    <!-- Verwendung des jQuery-Plugins "Quicksand" zur Sortierung der Rezepte -->
+    <script src="assets/js/rezepte.js"></script>
+
+</head>
+
+
+<!-- Quelle des Bildmaterials in diesem Dokument: http://www.chefkoch.de -->
+
+<body>
+
+    <div id="main_container">
+
+
+        <section class="content">
+
+            <!-- Kopfbereich -->
+            <header>
+
+                <!-- Navigation -->
+                <nav id="main_nav">
+                    <div id="main_nav_inner">
+                        <a href="index.html">Home</a>
+                        <a href="essentrinken.html" class="active">Regionale K&uuml;che</a>
+                        <a href="kahnfahren.html">Kahnfahren</a>
+                        <a href="sehenswuerdigkeiten.html">Sehensw&uuml;rdigkeiten</a>
+                    </div>
+                </nav>
+
+            </header>
+
+        </section>
+
+
+        <section class="content_fullwidth">
+
+                <p class="site_intro_text">
+                    Der Spreewald ist die Heimat der Spreewaldgurken. Das meist krumme, gr&uuml;ne und vor allem gesunde Gem&uuml;se k&ouml;nnen Sie nach Herzenslust in allen Varianten probieren. An den Anlegestellen werden saure, scharfe, salzige und w&uuml;rzige Gurken direkt aus dem Holzfass angeboten. Das Gem&uuml;se begegnet Ihnen im gesamten Spreewald, aber sehen und erleben Sie selbst. Unbedingt probieren sollten Sie auch den Spreew&auml;lder Fisch, leckere Plinse mit Apfelmus oder Pellkartoffeln mit Quark und frisch gepresstem lausitzer Lein&ouml;l uvm... Und zum Nachkochen hier ein paar regionale Rezepte aus Gro&szlig;mutters Kochbuch…Viel Spa&szlig;.
+                </p>
+
+        </section><!-- Ende content_fullwidth -->
+
+
+        <!-- Hier sind die Rezepte drin  -->
+        <section class="content">
+
+            <!--
+                Navi-Leiste zur Sortierung der Rezepte
+                Die einzelnen Kategorien ergeben sich aus den Inhalten der "data-tags"
+                der li-Elemente -> siehe rezepte.js
+            -->
+            <nav id="filter"></nav>
+
+            <section id="container">
+
+                <ul id="stage">
+                    <li data-tags="Vegetarisch">
+                        <a href="rezept1.html"><img src="assets/img/essen/schmorgurken-in-senfsahne.jpg" alt="" /></a>
+                        <p>Schmorgurken</p>
+                    </li>
+                    <li data-tags="Vegetarisch">
+                        <a href="rezept1.html"><img src="assets/img/essen/quark-mit-leinoel-pellkartoffeln-und-zwiebeln.jpg" alt="" /></a>
+                        <p>Quark, Lein&ouml;l &amp; Pellkartoffeln</p>
+                    </li>
+                    <li data-tags="Fleisch">
+                        <a href="rezept1.html"><img src="assets/img/essen/gruetzwurst.jpg" alt="" /></a>
+                        <p>Gr&uuml;tzwurst (Filling)</p>
+                    </li>
+                    <li data-tags="Fleisch">
+                        <a href="rezept1.html"><img src="assets/img/essen/tafelspitz-mit-meerrettichsauce.jpg" alt="" /></a>
+                        <p>Tafelspitz</p>
+                    </li>
+                    <li data-tags="Vegetarisch">
+                        <a href="rezept1.html"><img src="assets/img/essen/schnellgurken.jpg" alt="" /></a>
+                        <p>Schnellgurken</p>
+                    </li>
+                    <li data-tags="Vegetarisch">
+                        <a href="rezept1.html"><img src="assets/img/essen/spreewaelder-plinsen.jpg" alt="" /></a>
+                        <p>Plinse</p>
+                    </li>
+                    <li data-tags="Fisch">
+                        <a href="rezept1.html"><img src="assets/img/essen/spreewaelder-fischtopf.jpg" alt="" /></a>
+                        <p>Spreew&auml;lder Fischtopf</p>
+                    </li>
+                    <li data-tags="Fleisch">
+                        <a href="rezept1.html"><img src="assets/img/essen/soljanka.jpg" alt="" /></a>
+                        <p>Soljanka</p>
+                    </li>
+                    <li data-tags="Vegetarisch">
+                        <a href="rezept1.html"><img src="assets/img/essen/saure-eier.jpg" alt="" /></a>
+                        <p>Eier in Senfsauce</p>
+                    </li>
+                    <li data-tags="Vegetarisch">
+                        <a href="rezept1.html"><img src="assets/img/essen/vegetarisches-schmalz.jpg" alt="" /></a>
+                        <p>Vegetarisches Schmalz</p>
+                    </li>
+               </ul>
+            </section><!-- Ende container -->
+
+        </section><!-- Ende content -->
+
+    </div><!-- Ende main_container -->
+
+    <!-- Helfer-Element -->
+    <div class="clearboth;"></div>
+
+    <footer>
+        <div id="footer_inner">
+            <img id="beuth_logo" src="assets/img/beuth_logo_white.png">
+            <ul>
+                <li><a href="impressum.html">Impressum</a></li>
+            </ul>
+        </div><!-- Ende footer_inner -->
+    </footer>
+
+
+
+</body>
+</html>

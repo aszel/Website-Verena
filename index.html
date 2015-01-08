@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <!-- In Meta-Angaben können Sie verschiedene nützliche Anweisungen für Web-Server, Web-Browser und automatische Suchprogramme im Internet ("Robots") notieren. Meta-Angaben können Angaben zum Autor und zum Inhalt der Datei enthalten. Sie können aber auch HTTP-Befehle absetzen, zum Beispiel zum automatischen Weiterleiten des Web-Browsers zu einer anderen Adresse. (Quelle: http://de.selfhtml.org/html/kopfdaten/meta.htm)-->
+    <meta charset="utf-8" />
+    <meta name="description" content="Diese Website dient in erster Linie dem Kennenlernen und Anwenden von Internettechnologien. Das gewählte Thema ist hierbei der Spreewald mit all seinen Eigenschaften. Dem Nutzer der Website soll diese als Informationsübersicht bei der groben Orientierung helfen."/>
+    <meta name="keywords" content="Spreewald, Kahnfahren, Rezepte, Sehenswürdigkeiten, Paddeln"/>
+    <meta name="author" content="Verena Kuschke s779179"/>
+
+    <!-- Titel der Seite (was man oben im Browser sieht) -->
+    <title>Spreewald.de.gg</title>
+
+    <!-- Einbindung des Stylesheets -->
+    <link href="assets/css/main.css" type="text/css" rel="stylesheet" />
+
+
+    <!--
+         Für mobile Versionen der Website kann man die Styles anpassen.
+         Dazu muss die aktuelle Anzeige über einen sogenannten mediaquery abgefragt werden.
+         Somit kann zwischen unterschiedlichen Endgeräten unterschieden und dementsprechend
+         die Anzeige angepasst werden, z.B. Schriftart vergrößern etc.
+         Für dieses Projekt habe ich mich damit eingehend beschäftigt aber die Arbeit daran
+         abgebrochen, da sie schlicht zu umfangreich wurde. Die Datei "mediaqueries.css"
+         enthält dennoch passende Abfragen für unterschiedliche Geräte welche man
+         für einen späteres Projekt verwenden kann.
+    -->
+    <!--<link href="assets/css/mediaqueries.css" type="text/css" rel="stylesheet" />-->
+
+    <!-- Stylesheets für prettyPhoto -->
+    <link rel="stylesheet" href="assets/prettyPhoto/css/prettyPhoto.css"/>
+
+    <!-- Einbinden der jQuery-Bibliothek -->
+    <script src="assets/js/jquery.1.6.1.min.js"></script>
+    <!-- Einbinden des jQuery-Plugins prettyPhoto -->
+    <script src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+</head>
+
+
+
+
+<body>
+
+    <div id="main_container">
+
+        <section class="content">
+            
+            <!-- Kopfbereich -->
+            <header>
+
+                <!-- Navigation -->
+                <nav id="main_nav">
+                    <div id="main_nav_inner">
+                        <a href="index.html" class="active">Home</a>
+                        <a href="essentrinken.html">Regionale K&uuml;che</a>
+                        <a href="kahnfahren.html">Kahnfahren</a>
+                        <a href="sehenswuerdigkeiten.html">Sehensw&uuml;rdigkeiten</a>
+                    </div>
+                </nav>
+
+            </header><!-- Ende Kopfbereich -->
+
+            <!-- Überschrift erste Kategorie -->
+            <!--<h1>Spreewald</h1>-->
+            <img id="startseite_headline" src="assets/img/startseite_headline.png">
+
+        </section>
+
+        <section class="content_fullwidth">
+
+            <p class="site_intro_text">
+                Im S&uuml;den Brandenburgs, nur 60 Kilometer s&uuml;d&ouml;stlich von der Weltmetropole Berlin entfernt, erwartet Sie eine in Europa einzigartige Natur- und Kulturlandschaft.Auf einer Fl&auml;che von rund 2.600 Quadratkilometern, etwa so groß wie das Saarland, pr&auml;sentiert sich der Spreewald als abwechslungsreiche Region, die Sie verzaubern wird. Quer durch die Reiseregion erstreckt sich das UNESCO-Biosph&auml;renreservat. Wie ein dichtes Netz durchziehen die etwa 300 Wasserarme auf 1.000 Kilometern L&auml;nge den Spreewald. Auch zahlreiche Seen pr&auml;gen das vielf&auml;ltige Landschaftsbild.
+            </p>
+            <p class="site_intro_text">
+                Die geheimnisvolle Landschaft entstand in der Eiszeit. Heute schl&auml;ngeln sich auf 1.000 Kilometern Wasserl&auml;ufe durch die Naturkulisse. Mehr als ein Drittel des Spreewalds ist mit einem Jahrhundert alten Wald bedeckt, welcher der Region ihren Namen gibt. Das Biosph&auml;renreservat bildet einen Lebensraum f&uuml;r viele seltene Tier- und Pflanzenarten.
+            </p>
+            <p class="site_intro_text">
+                Seit Jahrhunderten ist der Spreewald ein von Menschen gepr&auml;gter Naturraum. Er z&auml;hlt zum Siedlungsgebiet der Sorben, einem Volk slawischer Abstammung mit eigener Sprache und Kultur, welches seit mehr als 1000 Jahren diese Landschaft kultiviert. Diese Einfl&uuml;sse begegnen Ihnen bei Ihrem Besuch auf unterschiedlichste Weise – in Form von zweisprachigen Ortsschildern, in Straßennamen, in der Trachtenvielfalt oder bei traditionellen Veranstaltungen. Sie werden staunen, was es im Winter mit dem &quot;Zampern&quot;, zu Ostern mit dem &quot;Eiermalen&quot;, zur Erntezeit mit dem &quot;Froschkarren&quot; und &quot;Stollereiten&quot; oder im Herbst mit der &quot;Spinte&quot; auf sich hat.
+            </p>
+
+        </section><!-- Ende content_fullwidth -->
+
+        <section class="content">
+
+            <!-- Bilderbereich -->
+            <div class="welcome_img_wrapper">
+
+                <div class="img_wrap">
+                    <a href="assets/img/startseite/startseite_zamper.jpg" rel="prettyPhoto">
+                        <img src="assets/img/startseite/startseite_zamper.jpg" alt="">
+                    </a>
+                    <div class="img_wrap_lower">
+                        <h2>Zampern</h2>
+                        <p>Eine alte sorbische Tradition in zahlreichen D&ouml;rfern der Lausitz. Entstanden aus vorchristlichen Glaubensformen ein heute immer noch beliebtes Volksfest.</p>
+                    </div>
+                </div>
+
+                <div class="img_wrap">
+                    <a href="assets/img/startseite/startseite_kahn.jpg" rel="prettyPhoto">
+                        <img src="assets/img/startseite/startseite_kahn.jpg" alt="">
+                    </a>
+                    <div class="img_wrap_lower">
+                        <h2>Kahnfahren</h2>
+                        <p>Entdecken Sie den Spreewald mit dem Kahn oder mit dem Paddelboot. Die schier unendlichen Wasserarme bieten ein reiches Naturschauspiel.</p>
+                    </div>
+                </div>
+
+                <div class="img_wrap">
+                    <a href="assets/img/startseite/startseite_eier.jpg" rel="prettyPhoto">
+                        <img src="assets/img/startseite/startseite_eier.jpg" alt="">
+                    </a>
+                    <div class="img_wrap_lower">
+                        <h2>Sorbische Eier</h2>
+                        <p>Sorbische Ostereier geh&ouml;ren zur Kultur der Sorben. Mit verschiedenen Techniken werden Eier aufw&auml;ndig bemalt und reich verziert.</p>
+                    </div>
+                </div>
+                
+                <div class="img_wrap">
+                    <a href="assets/img/startseite/startseite_froschkarren.jpg" rel="prettyPhoto">
+                        <img src="assets/img/startseite/startseite_froschkarren.jpg" alt="">
+                    </a>
+                    <div class="img_wrap_lower">
+                        <h2>Froschkarren</h2>
+                        <p>Die M&auml;dchen setzen einen Frosch auf eine Leiterkarre und veranstalten ein Wettrennen. Wer zuerst mit dem Frosch in das Ziel gelangt ist Siegerin.</p>
+                    </div>
+                </div>
+            </div><!-- Ende welcome_img_wrapper -->
+
+        </section><!-- Ende content -->
+        
+    </div><!-- Ende main_container -->
+
+    <!-- Helfer-Element -->
+    <div class="clearboth"></div>
+
+    <footer>
+        <div id="footer_inner">
+            <img id="beuth_logo" src="assets/img/beuth_logo_white.png">
+            <ul>
+                <li><a href="impressum.html">Impressum</a></li>
+            </ul>
+        </div><!-- Ende footer_inner -->
+    </footer>
+
+<script type="text/javascript">
+    // prettyPhoto initialisieren
+    jQuery(document).ready(function() {
+        $("a[rel^='prettyPhoto']").prettyPhoto({social_tools: false});
+    });
+</script>
+
+</body>
+</html>
